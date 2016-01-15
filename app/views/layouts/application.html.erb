@@ -4,18 +4,19 @@
 
     <div class="row">
 
-      <div class="col-md-8">
+      <div class="col-md-12">
         <%= yield %>
       </div>
 
-      <div class="col-md-4">
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
+    </div><!-- end of first row -->
 
+    <div class="row">
 
       <h2>About Doggerel Blog</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -33,7 +34,7 @@
 
       </div>
 
-    </div><!-- end of first row -->
+    </div><!-- end of second row -->
 
 
 

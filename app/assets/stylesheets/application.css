@@ -15,7 +15,7 @@
  */
 
 body {
-  background-color: #FDF7e7;
+  background-color: #F8E2D0;
 }
 
 h1 {
@@ -29,10 +29,11 @@ p {
 
 .main_logo {
   width: 100%;
+  border-bottom: 2px solid black;
 }
 
 .navbar {
-  background: white;
+  background: #4E2300;
 }
 
 .nav a {
@@ -43,3 +44,19 @@ p {
 .nav li:hover {
   background: grey;
 }
+
+#latest {
+  text-align: center;
+}
+
+article {
+  background: white;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 50%;
+
+}
+
