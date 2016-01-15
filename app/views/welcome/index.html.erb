@@ -1,16 +1,18 @@
 <%= image_tag "doggerel-blog-logo.png", class: "main_logo" %>
-<hr>
 
-<h2 id="latest">Latest Posts:</h2>
+
+<h2 class="centered_headers">Latest Posts:</h2>
 
 <% @posts.each do |post| %>
 
 <article>
   <h3><%= post.title %></h3>
+  <h4>By: user name</h4>
   <p><%= simple_format(post.body) %></p>
 </article>
 
 <% end %>
+
 
 
 <!-- h1>Welcome to Doggerel Blog</h1>

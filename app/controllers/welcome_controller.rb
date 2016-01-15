@@ -3,7 +3,6 @@ class WelcomeController < ApplicationController
 
   def index
     @posts = Post.all
-    @user_count = User.all.count
     @users = User.all
   end
 

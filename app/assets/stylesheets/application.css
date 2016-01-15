@@ -33,7 +33,7 @@ p {
 }
 
 .navbar {
-  background: #4E2300;
+  background: white;
 }
 
 .nav a {
@@ -45,8 +45,11 @@ p {
   background: grey;
 }
 
-#latest {
+.centered_headers {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 article {
@@ -54,9 +57,13 @@ article {
   margin: 0 auto;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 10px;
   width: 50%;
 
+}
+
+#two {
+  margin-bottom: 50px;
 }
 
