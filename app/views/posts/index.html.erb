@@ -1,20 +1,6 @@
-<% @post.each do |post| %>
-
-<h3><%= post.title %></h3>
-<p><%= simple_format(post.body) %></p>
-
-<% end %>
 
 
 
-
-
-
-
-
-
-
-<!--
 <%= image_tag @user.photo.url(:medium) %>
 
 <h2><%= @user.name %>'s posts!</h2>
@@ -24,4 +10,4 @@
 <li><%= link_to post.title, user_post_path(@user, post) %></li>
 
 <% end %>
-</ul> -->
+</ul>
