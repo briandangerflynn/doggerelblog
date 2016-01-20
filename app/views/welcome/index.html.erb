@@ -8,7 +8,7 @@
 
 <article>
   <h3><%= post.title %></h3>
-  <h4>By: user name</h4>
+  <h4>By: <%= link_to post.user, user_posts_path(post.user) %></h4>
   <p><%= simple_format(post.body) %></p>
 </article>
 

@@ -16,4 +16,12 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   has_many :posts
+
+  def to_s
+    if self.name
+      return self.name
+    else
+      return "Anonymous"
+    end
+  end
 end
