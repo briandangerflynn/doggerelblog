@@ -25,16 +25,21 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to 'Home', root_path %></li>
+        </ul>
 
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
 
+              <li><%= link_to 'About', welcome_about_path %></li>
               <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
               <li><%= link_to "New Post", new_user_post_path(current_user) %></li>
 
             <% else %>
 
+              <li><%= link_to 'About', welcome_about_path %></li>
               <li><%= link_to "Login", new_user_session_path %></li>
               <li><%= link_to "Sign up", new_user_registration_path %></li>
 

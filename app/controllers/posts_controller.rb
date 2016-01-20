@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   end
 
 
-
   private
 
   def safe_post_params

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
  root "welcome#index"
 
+ get "welcome/about" => "welcome#about"
+
  resources :users do
   resources :posts
 end

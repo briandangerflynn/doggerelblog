@@ -1,13 +1,24 @@
 
 
+<div class="profile_header">
+  <%= image_tag @user.photo.url(:square), :class => "profile_pic" %>
+  <h2><%= @user.name %>'s posts!</h2>
+  <hr>
+</div>
 
-<%= image_tag @user.photo.url(:medium) %>
 
-<h2><%= @user.name %>'s posts!</h2>
 
-<ul>
 <% @posts.each do |post| %>
-<li><%= link_to post.title, user_post_path(@user, post) %></li>
+
+  <article>
+    <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+    <p><%= simple_format(post.body) %></p>
+  </article>
 
 <% end %>
-</ul>
+
+
+
+
+
+
