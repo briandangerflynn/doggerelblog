@@ -1,29 +1,35 @@
+
+
 <%= image_tag "doggerel-blog-logo.png", class: "main_logo" %>
 
+<div id="welcome_main" class="row">
+  <div class="col-md-3">
 
-<h2 class="centered_headers">Latest Posts:</h2>
+    <div id="user_dashboard">
+      <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
+      <h4><%= link_to current_user.name %></h4>
+      <p>Number of posts: <%= current_user.posts.count %></p>
+
+    </div>
+
+  </div>
+  <div class="col-md-6">
+
+    <% @posts.each do |post| %>
+
+    <article id="welcome_poems">
+      <h3><%= post.title %></h3>
+      <h4>By: <%= link_to post.user, user_posts_path(post.user) %></h4>
+      <p><%= simple_format(post.body) %></p>
+    </article>
+
+    <% end %>
+  </div>
+  <div class="col-md-3">
+
+  </div>
+</div>
 
 
-<% @posts.each do |post| %>
-
-<article>
-  <h3><%= post.title %></h3>
-  <h4>By: <%= link_to post.user, user_posts_path(post.user) %></h4>
-  <p><%= simple_format(post.body) %></p>
-</article>
-
-<% end %>
 
 
-
-<!-- h1>Welcome to Doggerel Blog</h1>
-
-<p>We have <%= @user_count %> users!</p>
-
-<ul>
-<% @users.each do |user| %>
-
-  <li><%= link_to user.name, user_posts_path(user) %></li>
-
-<% end %>
-</ul> -->

@@ -53,14 +53,18 @@ p {
 }
 
 article {
-  background: white;
   margin: 0 auto;
+  background: white;
   margin-bottom: 10px;
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
   width: 50%;
+}
 
+#welcome_poems {
+  width: 90%;
+ /* margin: 0;*/
 }
 
 #two {
@@ -88,8 +92,24 @@ hr {
   border: 1px solid black;
 }
 
+#about_title {
+  text-decoration: underline;
+}
 
+#welcome_main {
+  margin-top: 30px;
+}
 
+#about_article {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.dashboard_pic {
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
 
 
 

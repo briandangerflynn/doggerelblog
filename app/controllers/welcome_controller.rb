@@ -6,5 +6,9 @@ class WelcomeController < ApplicationController
     @users = User.all
   end
 
+  def about
+
+  end
+
 
 end
