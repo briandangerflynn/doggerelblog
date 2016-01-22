@@ -3,14 +3,17 @@
 <%= image_tag "doggerel-blog-logo.png", class: "main_logo" %>
 
 <div id="welcome_main" class="row">
-  <div class="col-md-3">
 
+
+  <div class="col-md-3">
+<% if user_signed_in? %>
     <div id="user_dashboard">
       <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
-      <h4><%= link_to current_user.name %></h4>
+      <h4><%= link_to current_user.name, user_posts_path %></h4>
       <p>Number of posts: <%= current_user.posts.count %></p>
+      </div>
+<% end %>
 
-    </div>
 
   </div>
   <div class="col-md-6">
