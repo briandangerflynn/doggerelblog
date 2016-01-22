@@ -1,9 +1,16 @@
+<div id="logo_div" class="row">
+  <div class="col-md-2">
+  </div>
 
+  <div class="col-md-8">
+    <%= image_tag "doggerel-blog-logo.png", class: "main_logo" %>
+  </div>
 
-<%= image_tag "doggerel-blog-logo.png", class: "main_logo" %>
+  <div class="col-md-2">
+  </div>
+</div>
 
 <div id="welcome_main" class="row">
-
 
   <div class="col-md-3">
 <% if user_signed_in? %>
@@ -11,11 +18,10 @@
       <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
       <h4><%= link_to current_user.name %></h4>
       <p>Number of posts: <%= current_user.posts.count %></p>
-      </div>
+    </div>
 <% end %>
-
-
   </div>
+
   <div class="col-md-6">
 
     <% @posts.each do |post| %>
@@ -28,9 +34,11 @@
 
     <% end %>
   </div>
+
   <div class="col-md-3">
 
   </div>
+
 </div>
 
 
