@@ -1,4 +1,4 @@
-<!-- logo -->
+<!-- row 1 / logo start -->
 <div id="logo_div" class="row">
   <div class="col-md-2">
   </div>
@@ -12,24 +12,29 @@
 </div>
 
 <hr>
-<!-- logo end -->
+<!-- row 1 / logo end -->
 
-<!-- current user dashboard -->
+
+
+
+<!-- row 2 start -->
 <div id="welcome_main" class="row">
 
-
+<!-- current user dashboard -->
   <div class="col-md-3">
-<% if user_signed_in? %>
+    <% if user_signed_in? %>
 
-    <div id="user_dashboard">
-    <h4>Your Profile:</h4>
-      <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
-      <h4><%= link_to current_user.name %></h4>
-      <p>Number of posts: <%= current_user.posts.count %></p>
-    </div>
-<% end %>
+        <div id="user_dashboard">
+        <h4>Your Profile:</h4>
+          <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
+          <h4><%= link_to current_user.name, user_posts_path(current_user) %></h4>
+          <p>Number of posts: <%= current_user.posts.count %></p>
+        </div>
+    <% end %>
   </div>
 <!-- current user dashboard end -->
+
+
 
 <!-- poems -->
   <div class="col-md-6">
@@ -50,6 +55,7 @@
 <!-- poems end -->
 
 
+
 <!-- other users -->
 
   <div class="col-md-3">
@@ -58,7 +64,7 @@
     <h4>More Poets:</h4>
       <% @users.each do |user| %>
         <div id="more_poets">
-          <%= link_to user.name %>
+          <%= link_to user.name, user_posts_path(user) %>
         </div>
         <br>
       <% end %>
@@ -68,7 +74,8 @@
 
   </div>
 <!-- other users end -->
-</div>
+
+</div> <!-- row 2 end -->
 
 
 
