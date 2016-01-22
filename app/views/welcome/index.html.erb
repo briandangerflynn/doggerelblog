@@ -30,6 +30,10 @@
 
 <!-- poems -->
   <div class="col-md-6">
+    <% if user_signed_in? %>
+      <div id="new_poem"><%= link_to "Create New Poem", new_user_post_path(current_user) %></div>
+    <% end %>
+
     <% @posts.each do |post| %>
 
     <article id="welcome_poems">
@@ -45,7 +49,8 @@
 <!-- other users -->
 
   <div class="col-md-3">
-  <h4>Poets to Follow:</h4>
+  <% if user_signed_in? %>
+    <h4>Poets to Follow:</h4>
     <% @users.each do |user| %>
       <article id="user_list">
         <%= link_to user.name %>
@@ -53,6 +58,7 @@
       </article>
       <br>
     <% end %>
+  <% end %>
 
   </div>
 <!-- other users end -->

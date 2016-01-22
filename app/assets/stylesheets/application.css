@@ -112,6 +112,28 @@ hr {
   margin: 0;
 }
 
+#new_poem {
+  text-align: center;
+}
+
+#new_poem a {
+  padding: 10px;
+  width: 90%;
+  font-weight: bold;
+  color: grey;
+  background: white;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+#new_poem a:hover {
+  text-decoration: none;
+  background-color: coral;
+  color: white;
+}
+
 @media only screen and (max-width: 992px) {
 
 #user_dashboard {
