@@ -165,6 +165,22 @@ hr {
   display: none;
 }
 
+#welcome_poems {
+  width: 100%;
+}
+
+#welcome_poems h3 {
+  font-size: 3em;
+}
+
+#welcome_poems h4 {
+  font-size: 2em;
+}
+
+#welcome_poems p {
+  font-size: 1.75em;
+}
+
 }
 
 
