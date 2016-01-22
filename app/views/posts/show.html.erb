@@ -2,4 +2,4 @@
 
 <h3>by <%= link_to @post.user.name, user_posts_path(@post.user) %></h3>
 
-<p><%= @post.body %></p>
+<p><%= simple_format(@post.body) %></p>

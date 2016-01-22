@@ -17,8 +17,10 @@
 <!-- current user dashboard -->
 <div id="welcome_main" class="row">
 
+
   <div class="col-md-3">
 <% if user_signed_in? %>
+    <h4>Your Profile:</h4>
     <div id="user_dashboard">
       <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
       <h4><%= link_to current_user.name %></h4>
@@ -46,18 +48,22 @@
   </div>
 <!-- poems end -->
 
+  <div class="col-md-1">
+  </div>
+
 <!-- other users -->
 
-  <div class="col-md-3">
+  <div class="col-md-2">
   <% if user_signed_in? %>
-    <h4>Poets to Follow:</h4>
+
+    <h4>More Poets:</h4>
     <% @users.each do |user| %>
       <article id="user_list">
         <%= link_to user.name %>
-
       </article>
       <br>
     <% end %>
+
   <% end %>
 
   </div>
