@@ -1,3 +1,4 @@
+<!-- logo -->
 <div id="logo_div" class="row">
   <div class="col-md-2">
   </div>
@@ -10,6 +11,10 @@
   </div>
 </div>
 
+<hr>
+<!-- logo end -->
+
+<!-- current user dashboard -->
 <div id="welcome_main" class="row">
 
   <div class="col-md-3">
@@ -21,9 +26,10 @@
     </div>
 <% end %>
   </div>
+<!-- current user dashboard end -->
 
+<!-- poems -->
   <div class="col-md-6">
-
     <% @posts.each do |post| %>
 
     <article id="welcome_poems">
@@ -34,11 +40,21 @@
 
     <% end %>
   </div>
+<!-- poems end -->
+
+<!-- other users -->
 
   <div class="col-md-3">
+  <h4>Poets to Follow:</h4>
+    <% @users.each do |user| %>
+      <article id="user_list">
+        <%= link_to user.name %>
+
+      </article>
+    <% end %>
 
   </div>
-
+<!-- other users end -->
 </div>
 
 
