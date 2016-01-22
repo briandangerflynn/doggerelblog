@@ -9,7 +9,7 @@
 <% if user_signed_in? %>
     <div id="user_dashboard">
       <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
-      <h4><%= link_to current_user.name, user_posts_path %></h4>
+      <h4><%= link_to current_user.name %></h4>
       <p>Number of posts: <%= current_user.posts.count %></p>
       </div>
 <% end %>
