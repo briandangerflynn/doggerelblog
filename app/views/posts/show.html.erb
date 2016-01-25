@@ -10,9 +10,13 @@
 
     <span id="upvote"><%= link_to 'upvote +1', upvote_post_path(@post), method: :post %></span>
 
+    <% if @user.name == current_user.name %>
+
     <p id="edit_poem"><%= link_to "Edit Poem", edit_post_path %></p>
 
     <p id="delete_poem"><%= link_to "Delete Poem", @post, method: :delete, data: {confirm: "are you sure?"} %></p>
+
+    <% end %>
 
   </article>
 </div>
