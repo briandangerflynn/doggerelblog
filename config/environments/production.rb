@@ -81,8 +81,8 @@ config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['blogrflynn'],
-    :access_key_id => ENV['AKIAJ2Z4KDCI5LQNQCNQ'],
-    :secret_access_key => ENV['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']
+    :access_key_id => ENV['AWS_ACCESS_KEY'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 
