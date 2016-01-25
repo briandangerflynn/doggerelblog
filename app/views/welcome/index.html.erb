@@ -16,7 +16,6 @@
 <!-- current user dashboard -->
   <div class="col-md-3">
     <% if user_signed_in? %>
-
         <div id="user_dashboard">
         <h4>Your Profile:</h4>
           <%= image_tag current_user.photo.url, :class => "dashboard_pic" %>
