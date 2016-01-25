@@ -49,8 +49,8 @@
       <h3><%= post.title %></h3>
       <h4>By: <%= link_to post.user, user_posts_path(post.user) %></h4>
       <p><%= simple_format(post.body) %></p>
-      <p><%= pluralize(post.votes.count, "vote") %></p>
-      <%= button_to '+1', upvote_post_path(post), method: :post %>
+      <p id="count"><%= pluralize(post.votes.count, "upvote") %></p>
+      <span id="upvote"><%= link_to 'upvote +1', upvote_post_path(post), method: :post %></span>
     </article>
 
     <% end %>

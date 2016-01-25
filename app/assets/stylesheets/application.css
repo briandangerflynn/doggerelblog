@@ -15,7 +15,11 @@
  */
 
 body {
-  background-color: #FFEED8;
+  background-color: #FFF3E9;
+}
+
+#logo_div {
+  background-color: #FFDCBD;
 }
 
 h1 {
@@ -31,12 +35,12 @@ p {
 }
 
 .navbar {
-  background: white;
+  background: #FFA453;
 }
 
-.nav a {
+#bs-example-navbar-collapse-1 a {
+  color: white;
   font-weight: bold;
-  color: blue;
 }
 
 .nav li:hover {
@@ -137,8 +141,8 @@ hr {
   padding: 10px;
   width: 90%;
   font-weight: bold;
-  color: #FFF3EA;
-  background: #714019;
+  color: white;
+  background: #FFA453;
   margin-bottom: 20px;
   border: 2px solid black;
   display: inline-block;
@@ -147,9 +151,44 @@ hr {
 
 #new_poem a:hover {
   text-decoration: none;
-  background-color: #9B6B44;
+  background-color: #FFB472;
   color: #FFF3EA;
 }
+
+#upvote a {
+  color: white;
+  padding: 10px;
+  background-color: #FFA453;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  display: block;
+  width: 100px;
+  margin: 10px 0;
+}
+
+#upvote a:hover {
+  text-decoration: none;
+  background-color: #FFB472;
+}
+
+#count {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 992px) {
 
