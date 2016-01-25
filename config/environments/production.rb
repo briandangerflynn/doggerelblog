@@ -81,7 +81,8 @@ config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['blogrflynn'],
-    :s3_credentials => "#{Rails.root}/config/aws.yml"]
+    :access_key_id => ENV['AKIAJ2Z4KDCI5LQNQCNQ'],
+    :secret_access_key => ENV['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']
   }
 }
 

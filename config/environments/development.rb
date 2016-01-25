@@ -46,8 +46,7 @@ Rails.application.configure do
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['blogrflynn'],
-    :access_key_id => ENV['AKIAJ2Z4KDCI5LQNQCNQ'],
-    :secret_access_key => ENV['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']
+    :s3_credentials => "#{Rails.root}/config/aws.yml"]
   }
 }
 
