@@ -1,9 +1,15 @@
-<h1>New post by <%= current_user.name %></h1>
+<div class="container">
 
-<div>
-  <%= form_for [current_user, @post] do |f| %>
-  <p>Title: <%= f.text_field :title %></p>
-  <p>Body: <%= f.text_area :body, size: "50x20" %></p>
-  <%= f.submit "Add Post", :class => "btn btn-default" %>
-  <% end %>
+  <h1>New poem by <%= current_user.name %></h1>
+
+  <div>
+    <%= form_for [current_user, @post] do |f| %>
+    <p>Title:</p>
+    <p><%= f.text_field :title %></p>
+    <p>Body:</p>
+    <p><%= f.text_area :body, size: "50x20" %></p>
+    <%= f.submit "Add Post", :class => "btn btn-default" %>
+    <% end %>
+  </div>
+
 </div>
