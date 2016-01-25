@@ -18,8 +18,28 @@ body {
   background-color: #FFF3E9;
 }
 
+.container {
+  width: 80%;
+}
+
+.row {
+  margin: 0;
+}
+
+.main_logo {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.main_logo img {
+  margin: 0 auto;
+}
+
 #logo_div {
-  background-color: #FFDCBD;
+   background-color: #FFDCBD;
+   width: 100%;
+  /* border-bottom: 2px black solid;*/
+   margin: auto;
 }
 
 h1 {
@@ -30,12 +50,9 @@ p {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.main_logo {
-  width: 100%;
-}
-
 .navbar {
   background: #FFA453;
+  margin: 0;
 }
 
 #bs-example-navbar-collapse-1 a {
@@ -44,7 +61,7 @@ p {
 }
 
 .nav li:hover {
-  background: grey;
+  background: #FFB472;
 }
 
 .centered_headers {
@@ -59,7 +76,7 @@ article {
   background: white;
   margin-bottom: 10px;
   padding: 10px;
-  border: 2px solid black;
+ /* border: 2px solid black;*/
   border-radius: 10px;
   width: 50%;
 }
@@ -111,20 +128,20 @@ hr {
 #user_dashboard {
   background: white;
   padding: 15px;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   border-radius: 10px;
 }
 
 .dashboard_pic {
   width: 60%;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   border-radius: 10px;
 }
 
 #user_list {
   background-color: white;
   padding: 15px;
-  border: 2px solid black;
+ /* border: 2px solid black;*/
   border-radius: 10px;
 }
 
@@ -144,7 +161,7 @@ hr {
   color: white;
   background: #FFA453;
   margin-bottom: 20px;
-  border: 2px solid black;
+ /* border: 2px solid black;*/
   display: inline-block;
   border-radius: 10px;
 }
@@ -159,7 +176,7 @@ hr {
   color: white;
   padding: 10px;
   background-color: #FFA453;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   border-radius: 10px;
   font-weight: bold;
   display: block;
