@@ -1,27 +1,72 @@
+<div class="container">
+
+  <div class="row">
 
 
-<div class="profile_header">
-  <%= image_tag @user.photo.url(:square), :class => "profile_pic" %>
-  <h2><%= @user.name %>'s posts!</h2>
-  <hr>
+
+<!-- profile pic -->
+
+    <div class="col-md-3">
+
+      <div class="profile_header">
+
+        <%= image_tag @user.photo.url(:square), :class => "profile_pic" %>
+         <h2><%= @user.name %></h2>
+         <p><%= link_to 'Edit profile', edit_user_registration_path %></p>
+        <p>Number of posts: <%= @user.posts.count %></p>
+      </div>
+    </div>
+
+<!-- profile pic -->
+
+
+
+<!-- profile poems -->
+
+    <div class="col-md-6">
+
+       <% @posts.each do |post| %>
+
+      <article id="profile_poems">
+        <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+        <p><%= simple_format(post.body) %></p>
+        <p id="count"><%= pluralize(post.votes.count, "upvote") %></p>
+        <span id="upvote"><%= link_to 'upvote +1', upvote_post_path(post), method: :post %></span>
+      </article>
+
+      <% end %>
+
+    </div>
+
+
+<!-- profile poems -->
+
+
+
+<!-- other poets -->
+
+  <div id="profile_other_poets">
+      <div class="col-md-3">
+
+        <% if user_signed_in? %>
+          <div id="user_list">
+
+            <h4>More Poets:</h4>
+            <% @users.each do |user| %>
+                <div id="more_poets">
+                  <%= link_to user.name, user_posts_path(user) %>
+              </div>
+            <% end %>
+
+          </div>
+        <% end %>
+
+    </div>
+  </div>
+<!-- profile pic -->
+
+  </div>
 </div>
-
-
-
-<% @posts.each do |post| %>
-
-  <article>
-    <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
-    <p><%= simple_format(post.body) %></p>
-    <p id="count"><%= pluralize(post.votes.count, "upvote") %></p>
-    <span id="upvote"><%= link_to 'upvote +1', upvote_post_path(post), method: :post %></span>
-  </article>
-
-<% end %>
-
-<p><%= link_to 'Edit profile', edit_user_registration_path %></p>
-
-
 
 
 
