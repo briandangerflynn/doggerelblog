@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 
   def index
     @posts = Post.order("updated_at DESC")
-    @users = User.all
+    @users = User.limit(10)
   end
 
   def about

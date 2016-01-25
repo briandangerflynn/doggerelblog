@@ -197,6 +197,23 @@ article {
   background-color: #FFB472;
 }
 
+#downvote a {
+  color: white;
+  padding: 10px;
+  background-color: red;
+  /*border: 2px solid black;*/
+  border-radius: 10px;
+  font-weight: bold;
+  display: block;
+  width: 100px;
+  margin: 10px 0;
+}
+
+#downvote a:hover {
+  text-decoration: none;
+  background-color: coral;
+}
+
 #count {
   margin-bottom: 20px;
   font-weight: bold;

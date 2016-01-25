@@ -11,6 +11,12 @@ resources :posts do
   end
 end
 
+resources :posts do
+  member do
+    post 'downvote'
+  end
+end
+
  resources :users do
   resources :posts
 end

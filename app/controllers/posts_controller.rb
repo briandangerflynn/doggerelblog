@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @users = User.all
+    @users = User.limit(10)
     @posts = @user.posts.order("updated_at DESC")
   end
 
@@ -49,6 +49,12 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:id])
     @post.votes.create
+    redirect_to(root_path)
+  end
+
+  def downvote
+    @post = Post.find(params[:id])
+    @post.votes.first.destroy
     redirect_to(root_path)
   end
 

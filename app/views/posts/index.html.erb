@@ -45,6 +45,7 @@
         <p><%= simple_format(post.body) %></p>
         <p id="count"><%= pluralize(post.votes.count, "upvote") %></p>
         <span id="upvote"><%= link_to 'upvote +1', upvote_post_path(post), method: :post %></span>
+        <span id="downvote"><%= link_to 'downvote', downvote_post_path(post), method: :post %></span>
       </article>
 
       <% end %>
