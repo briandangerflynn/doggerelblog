@@ -14,6 +14,18 @@
  *= require_self
  */
 
+
+<!-- color theme from light to dark -->
+
+/*{ color: #FFF3E9 }
+{ color: #FFDCBD }
+{ color: #FFC796 }
+{ color: #FFB572 }
+{ color: #FFA453 }*/
+
+<!-- end of color theme -->
+
+
 body {
   background-color: #FFF3E9;
 }
