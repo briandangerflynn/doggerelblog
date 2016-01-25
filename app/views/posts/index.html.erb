@@ -13,6 +13,7 @@
         <%= image_tag @user.photo.url(:square), :class => "profile_pic" %>
          <h2><%= @user.name %></h2>
          <p><%= link_to 'Edit profile', edit_user_registration_path %></p>
+          <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
         <p>Number of posts: <%= @user.posts.count %></p>
       </div>
     </div>

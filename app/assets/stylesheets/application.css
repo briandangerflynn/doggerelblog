@@ -43,7 +43,7 @@ body {
 }
 
 h1 {
-  color: #D15513;
+  color: #FFA453;
 }
 
 p {
@@ -111,15 +111,6 @@ article {
 .profile_pic {
   /*border: 2px solid black;*/
   border-radius: 10px;
-}
-
-hr {
-  border: 1px solid black;
-  width: 100%;
-}
-
-#about_title {
-
 }
 
 #welcome_main {
@@ -197,6 +188,10 @@ hr {
 #count {
   margin-bottom: 20px;
   font-weight: bold;
+}
+
+#copyright {
+  text-align: center;
 }
 
 
