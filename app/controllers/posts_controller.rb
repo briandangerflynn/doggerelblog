@@ -22,6 +22,14 @@ class PostsController < ApplicationController
     redirect_to user_posts_path(@user)
   end
 
+  def upvote
+  @post = Post.find(params[:id])
+  @post.votes.create
+  redirect_to(root_path)
+  end
+
+
+
 
   private
 

@@ -15,7 +15,7 @@
  */
 
 body {
-  background-color: #F8E2D0;
+  background-color: #FFEED8;
 }
 
 h1 {
@@ -137,8 +137,8 @@ hr {
   padding: 10px;
   width: 90%;
   font-weight: bold;
-  color: brown;
-  background: white;
+  color: #FFF3EA;
+  background: #714019;
   margin-bottom: 20px;
   border: 2px solid black;
   display: inline-block;
@@ -147,11 +147,13 @@ hr {
 
 #new_poem a:hover {
   text-decoration: none;
-  background-color: coral;
-  color: white;
+  background-color: #9B6B44;
+  color: #FFF3EA;
 }
 
 @media only screen and (max-width: 992px) {
+
+
 
 #user_dashboard {
   display: none;
@@ -166,6 +168,10 @@ hr {
 }
 
 #welcome_poems {
+  width: 100%;
+}
+
+#new_poem a {
   width: 100%;
 }
 
