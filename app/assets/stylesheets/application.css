@@ -227,7 +227,10 @@ article {
   width: 50%;
 }
 
-
+#profile_poems_header {
+  margin-left: 10%;
+  color: grey;
+}
 
 
 
