@@ -49,13 +49,13 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:id])
     @post.votes.create
-    redirect_to(root_path)
+    redirect_to :back
   end
 
   def downvote
     @post = Post.find(params[:id])
     @post.votes.first.destroy
-    redirect_to(root_path)
+    redirect_to :back
   end
 
 
